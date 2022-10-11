@@ -5,14 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Input Types</title>
+    <style>
+      div {
+        margin: 10px;
+      }
+    </style>
   </head>
   <body>
-    
-  <!--Challenge 1: Create search input with label "What's on your mind?"-->
-  <div>
-    <input type="text" name="name" id="name">
-    <label for="name">What's on your mind?</label>
-  </div>
+    <!--Challenge 1: Create search input with label "What's on your mind?"-->
+    <div>
+      <input type="text" name="name" id="name" />
+      <label for="name">What's on your mind?</label>
+    </div>
 
-</body>
+    <!--Challenge 2: Create form w/ date input "What is your birthday?", and a submit button, send to /submit -->
+    <div>
+      <form action="/submit">
+      <input type="date" name="date" id="date">
+      <label for="date">What is your birthday?</label>
+      <input type="button" value="Submit">
+      </form>
+    </div>
+  </body>
 </html>
