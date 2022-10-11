@@ -14,44 +14,63 @@
   <body>
     <!--Challenge 1: Create search input with label "What's on your mind?"-->
     <div>
-      <input type="text" name="name" id="name" />
-      <label for="name">What's on your mind?</label>
+      <label for="query">What's on your mind?</label>
+      <input type="search" name="query" id="query" />
     </div>
 
     <!--Challenge 2: Create form w/ date input "What is your birthday?", and a submit button, send to /submit -->
     <div>
       <form action="/submit">
-        <input type="date" name="date" id="date" />
         <label for="date">What is your birthday?</label>
+        <input type="date" name="date" id="date" />
         <input type="button" value="Submit" />
       </form>
     </div>
 
     <!--Challenge 3: Create radio input asking "What is your favorite primary color, with blue, yellow and red as options" -->
+
+    <label for="">What is your favorite primary color?</label>
     <div>
-      <label>What is your favorite primary color?</label>
-      <input type="radio" name="color" id="red" checked />
-      <label for="red">Red</label>
-      <input type="radio" name="color" id="yellow" />
-      <label for="yellow">Yellow</label>
-      <input type="radio" name="color" id="blue" />
+      <input type="radio" name="primary-color" id="blue" checked value="blue" />
       <label for="blue">Blue</label>
+    </div>
+    <div>
+      <input type="radio" name="primary-color" id="yellow" value="yellow" />
+      <label for="yellow">Yellow</label>
+    </div>
+    <div>
+      <input type="radio" name="primary-color" id="red" value="red" />
+      <label for="red">Red</label>
     </div>
 
     <!-- Challenge 4: Create checkbox inputs asking "How do you like to travel?" with plane, bus, train, car, walking as options -->
+    <label for="">How do you like to travel?</label>
     <div>
-
-      <label for="">How do you like to travel?</label>
-      <input type="checkbox" name="travel" id="plane">
-      <label for="plane">Plane</label>
-      <input type="checkbox" name="travel" id="bus">
-      <label for="bus">Bus</label>
-      <input type="checkbox" name="travel" id="car">
-      <label for="car">Car</label>
-      <input type="checkbox" name="travel" id="walking">
-      <label for="walking">Walking</label>
+      <div>
+        <input type="checkbox" name="transportation" id="plane" value="plane" />
+        <label for="plane">Plane</label>
+      </div>
+      <div>
+        <input type="checkbox" name="transportation" id="bus" value="bus" />
+        <label for="bus">Bus</label>
+      </div>
+      <div>
+        <input type="checkbox" name="transportation" id="car" value="car" />
+        <label for="car">Car</label>
+      </div>
+      <div>
+        <input
+          type="checkbox"
+          name="transportation"
+          id="walking"
+          value="walking"
+        />
+        <label for="walking">Walking</label>
+      </div>
+      <div>
+        <input type="checkbox" name="transportation" id="train" value="train" />
+        <label for="train">Train</label>
+      </div>
     </div>
-
-    
   </body>
 </html>
