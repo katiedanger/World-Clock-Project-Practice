@@ -28,12 +28,24 @@
     </select>
 
     <!-- Challenge 2 -->
-<label for="colors">What is your favorite primary color?</label>
+    <label for="colors">What is your favorite primary color?</label>
     <select name="colors" id="colors">
       <option value="">Select a color</option>
       <option value="red">Red</option>
       <option value="blue">Blue</option>
       <option value="yellow">Yellow</option>
+    </select>
+    <script>
+      function showHeart(event) {
+        if (event.target.value.length > 0) {
+          if (event.target.value === "red") {
+            alert("❤️");
+          }
+        }
+      }
 
+      let colorSelect = document.querySelector("#colors");
+      colorSelect.addEventListener("change", showHeart);
+    </script>
   </body>
 </html>
