@@ -6,27 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
-    <script src="src/script.js"></script>
-    <link rel="stylesheet" href="src/style.css" />
+
     <title>Time Zone Dropdown</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
     <div>
-    <label for="cities">Choose a city:</label>
-    <select name="cities" id="cities">
-<option value="Paris">Paris 🇫🇷</option>
-<option value="Tokyo">Tokyo 🇯🇵</option>
-<option value="Sydney">Sydney 🇦🇺</option>
-
-    </select>
+      <label for="cities">Choose a city:</label>
+      <select name="cities" id="cities">
+        <option value="Paris">Paris 🇫🇷</option>
+        <option value="Tokyo">Tokyo 🇯🇵</option>
+        <option value="Sydney">Sydney 🇦🇺</option>
+      </select>
     </div>
 
     <script>
-
-
-
-let citiesSelect = document.querySelector("#cities");
-citiesSelect.addEventListener("change", showTimeAlert);
+      let citiesSelect = document.querySelector("#cities");
+      citiesSelect.addEventListener("change", showTimeAlert);
     </script>
   </body>
 </html>
