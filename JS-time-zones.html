@@ -7,13 +7,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
     <title>Date Timezone</title>
-    <!--Challenge 1-->
+    <!--Challenge 2-->
     <h3>The current date and time in Honolulu, Hawaii:</h3>
     <div id="hawaii"></div>
 
-    <!--Challenge 2-->
+    <!--Challenge 3-->
     <h3>In 10 Years from now, in Paris, France ...</h3>
     <div id="paris"></div>
+
+    <!--Challenge 4-->
+    <h3>The current, local time zone is:</h3>
+    <div id="local"></div>
 
     <script>
       let hawaiiTime = moment()
@@ -28,6 +32,10 @@
         .format("dddd, MMMM D, YYYY h:m A");
       let parisBox = document.querySelector("#paris");
       parisBox.innerHTML = `10 years from now, it will be ${parisTime} in Paris France`;
+
+      let localTime = moment.tz.guess();
+      let localBox = document.querySelector("#local");
+      localBox.innerHTML = localTime;
     </script>
   </head>
   <body></body>
