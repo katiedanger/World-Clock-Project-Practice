@@ -12,6 +12,8 @@
     <div id="date"></div>
 
     <!-- Challenge 2: Display milliseconds of the current date and update every millisecond -->
+    <h3>Current Milliseconds</h3>
+    <div id="milli"></div>
 
     <script>
       function tellDate() {
@@ -19,7 +21,15 @@
         dateBox.innerHTML = new Date();
       }
 
+      function runMilliseconds() {
+        let millisecondsBox = document.querySelector("#milli");
+        millisecondsBox.innerHTML = Date.now();
+      }
+
       setTimeout(tellDate, 5000);
+
+      runMilliseconds();
+      setInterval(runMilliseconds, 100);
     </script>
   </body>
 </html>
