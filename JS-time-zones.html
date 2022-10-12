@@ -11,12 +11,23 @@
     <h3>The current date and time in Honolulu, Hawaii:</h3>
     <div id="hawaii"></div>
 
+    <!--Challenge 2-->
+    <h3>In 10 Years from now, in Paris, France ...</h3>
+    <div id="paris"></div>
+
     <script>
       let hawaiiTime = moment()
         .tz("US/Hawaii")
         .format("dddd, MMMM D, YYYY h:m A");
       let hawaiiBox = document.querySelector("#hawaii");
       hawaiiBox.innerHTML = `It is ${hawaiiTime} in Honolulu, Hawaii`;
+
+      let parisTime = moment()
+        .tz("Europe/Paris")
+        .add(10, "years")
+        .format("dddd, MMMM D, YYYY h:m A");
+      let parisBox = document.querySelector("#paris");
+      parisBox.innerHTML = `10 years from now, it will be ${parisTime} in Paris France`;
     </script>
   </head>
   <body></body>
