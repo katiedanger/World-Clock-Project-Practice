@@ -39,6 +39,9 @@
         if (event.target.value === "Tokyo") {
           alert(`It is ${tokyoTimeAlert} in Tokyo`);
         }
+        if (event.target.value === "Sydney") {
+          alert(`It is ${sydneyTimeAlert} in Sydney`);
+        }
       }
 
       let parisTimeAlert = moment()
@@ -47,6 +50,10 @@
 
       let tokyoTimeAlert = moment()
         .tz("Asia/Tokyo")
+        .format("dddd, MMMM D, YYYY h:m A");
+
+      let sydneyTimeAlert = moment()
+        .tz("Australia/Sydney")
         .format("dddd, MMMM D, YYYY h:m A");
 
       let citiesSelect = document.querySelector("#cities");
