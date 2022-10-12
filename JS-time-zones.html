@@ -7,6 +7,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
     <title>Date Timezone</title>
+    <!--Challenge 1-->
+    <h3>The current date and time in Honolulu, Hawaii:</h3>
+    <div id="hawaii"></div>
+
+
+    <script>
+      let hawaiiTime = moment().tz("US/Hawaii").format("dddd, MMMM D, YYYY h:m A");
+      let hawaiiBox = document.querySelector("#hawaii");
+      hawaiiBox.innerHTML = `It is ${hawaiiTime} in Honolulu, Hawaii`;
+    </script>
   </head>
   <body></body>
 </html>
