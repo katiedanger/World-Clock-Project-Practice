@@ -24,6 +24,7 @@
     <div>
       <label for="cities">Choose a city:</label>
       <select name="cities" id="cities">
+        <option value="#">Select A City ⬇️</option>
         <option value="Paris">Paris 🇫🇷</option>
         <option value="Tokyo">Tokyo 🇯🇵</option>
         <option value="Sydney">Sydney 🇦🇺</option>
@@ -33,10 +34,14 @@
     <script>
       function showTimeAlert(event) {
         if (event.target.value === "Paris") {
-          alert("paris time zone");
+          alert(`It is ${parisTimeAlert} in Europe/Paris`);
         }
       }
-      /* Find out how to define, then alert with interpolation the variables and strings to alert time zone */
+
+      let parisTimeAlert = moment()
+        .tz("Europe/Paris")
+        .format("dddd, MMMM D, YYYY h:m A");
+
       let citiesSelect = document.querySelector("#cities");
       citiesSelect.addEventListener("change", showTimeAlert);
     </script>
