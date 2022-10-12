@@ -36,10 +36,17 @@
         if (event.target.value === "Paris") {
           alert(`It is ${parisTimeAlert} in Europe/Paris`);
         }
+        if (event.target.value === "Tokyo") {
+          alert(`It is ${tokyoTimeAlert} in Tokyo`);
+        }
       }
 
       let parisTimeAlert = moment()
         .tz("Europe/Paris")
+        .format("dddd, MMMM D, YYYY h:m A");
+
+      let tokyoTimeAlert = moment()
+        .tz("Asia/Tokyo")
         .format("dddd, MMMM D, YYYY h:m A");
 
       let citiesSelect = document.querySelector("#cities");
