@@ -11,9 +11,10 @@
     <h3>The current date and time in Honolulu, Hawaii:</h3>
     <div id="hawaii"></div>
 
-
     <script>
-      let hawaiiTime = moment().tz("US/Hawaii").format("dddd, MMMM D, YYYY h:m A");
+      let hawaiiTime = moment()
+        .tz("US/Hawaii")
+        .format("dddd, MMMM D, YYYY h:m A");
       let hawaiiBox = document.querySelector("#hawaii");
       hawaiiBox.innerHTML = `It is ${hawaiiTime} in Honolulu, Hawaii`;
     </script>
