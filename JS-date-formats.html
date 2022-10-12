@@ -5,24 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS Date Formats</title>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
   </head>
   <body>
     <!-- Challenge 1: "Today is [insert current date]"-->
     <h3>Current Date:</h3>
     <div id="today"></div>
 
+    <!-- Challenge 2: "10 Years from now ..."-->
     <h3>10 Years From Now ...</h3>
     <div id="decade"></div>
+
     <script>
       let today = moment().format("dddd Do MMMM");
       let todayElement = document.querySelector("#today");
       todayElement.innerHTML = `Today is ${today}`;
 
       let decadeElement = document.querySelector("#decade");
-      let decade = moment().add(10, 'y').format('MMMM Do YYYY, h:mm:ss a');
+      let decade = moment().add(10, "y").format("MMMM Do YYYY, h:mm:ss a");
       decadeElement.innerHTML = `10 years from now it will be ${decade}`;
     </script>
   </body>
