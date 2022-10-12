@@ -10,16 +10,20 @@
     ></script>
   </head>
   <body>
+    <!-- Challenge 1: "Today is [insert current date]"-->
+    <h3>Current Date:</h3>
     <div id="today"></div>
-    <div id="tomorrow"></div>
+
+    <h3>10 Years From Now ...</h3>
+    <div id="decade"></div>
     <script>
       let today = moment().format("dddd Do MMMM");
       let todayElement = document.querySelector("#today");
-      todayElement.innerHTML = today;
+      todayElement.innerHTML = `Today is ${today}`;
 
-      let tomorrowElement = document.querySelector("#tomorrow");
-      let tomorrow = moment().add(1, "day").format("dddd Do, MMMM");
-      tomorrowElement.innerHTML = `Tomorrow will be ${tomorrow}`;
+      let decadeElement = document.querySelector("#decade");
+      let decade = moment().add(10, 'y').format('MMMM Do YYYY, h:mm:ss a');
+      decadeElement.innerHTML = `10 years from now it will be ${decade}`;
     </script>
   </body>
 </html>
